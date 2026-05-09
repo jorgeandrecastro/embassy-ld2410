@@ -1,0 +1,35 @@
+[package]
+name = "embassy-ld2410"
+version = "0.1.0"
+authors = ["Jorge Andre Castro <jorgeandrecastro@example.com>"]
+edition = "2024"
+description = "Async driver for LD2410C Human Presence Radar using Embassy and UART"
+license = "GPL-2.0-or-later"
+repository = "https://github.com/jorgeandrecastro/embassy-ld2410"
+readme = "README.md"
+keywords = ["embassy", "ld2410", "radar", "rp2040", "rp2350"]
+categories = ["embedded", "no-std", "hardware-support"]
+
+[dependencies]
+embassy-rp = { version = "0.10" }
+defmt = { version = "1.0", optional = true }
+
+
+embedded-io-async = "0.7"
+
+
+[features]
+default = []
+rp2040  = ["embassy-rp/rp2040"]
+rp235xa = ["embassy-rp/rp235xa"]
+rp235xb = ["embassy-rp/rp235xb"]
+defmt   = ["dep:defmt"]
+
+[package.metadata.docs.rs]
+all-features = true
+targets = ["thumbv6m-none-eabi", "thumbv8m.main-none-eabi"]
+
+[profile.release]
+codegen-units = 1
+debug = 2
+lto = true
