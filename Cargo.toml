@@ -1,6 +1,6 @@
 [package]
 name = "embassy-ld2410"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Jorge Andre Castro <jorgeandrecastro@example.com>"]
 edition = "2024"
 description = "Async driver for LD2410C Human Presence Radar using Embassy and UART"

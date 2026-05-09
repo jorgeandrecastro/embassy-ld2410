@@ -61,11 +61,12 @@ LD2410C GND →  Pico GND
 
 ```toml
 [dependencies]
-embassy-ld2410 = "0.1.0"
+embassy-ld2410 = "0.1.1"
 
 [features]
 rp235xa = ["embassy-ld2410/rp235xa"]  # Pico 2
 rp2040  = ["embassy-ld2410/rp2040"]   # Pico 1
+rp235xb = ["embassy-rp/rp235xb"]
 ```
 
 ---
